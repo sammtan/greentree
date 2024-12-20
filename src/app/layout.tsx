@@ -37,7 +37,7 @@ export default function HomePageLayout({ children }: Readonly<{ children: React.
       <body className={`${inter.className} overflow-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex flex-col h-screen">
-            <nav className="flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm z-10">
+            <nav className="flex items-center justify-center p-4 backdrop-blur-sm z-10">
               <div className="flex space-x-4">
                 <Button variant="ghost" size="sm" onClick={() => router.push('/')}>
                   <House weight="fill" className="mr-2" /> Home

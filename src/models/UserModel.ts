@@ -4,6 +4,7 @@ export interface User {
     _id?: ObjectId;
     username: string;
     password: string;
+    role: 'user' | 'admin';
     createdAt: Date;
 }
 
@@ -18,7 +19,8 @@ export class UserModel {
         const user: User = {
             username,
             password,
-            createdAt: new Date()
+            createdAt: new Date(),
+            role: 'user'
         };
         const result = await this.db.collection('users').insertOne(user);
         return { ...user, _id: result.insertedId };

@@ -3,13 +3,13 @@ import { ObjectId } from 'mongodb';
 import clientPromise from '@/lib/mongodb';
 
 export interface TreeRating {
-    id: string;
+    username: string;
     rating: number;
     createdAt: Date;
 }
 
 export interface TreeReport {
-    id: string;
+    username: string;
     description: string;
     createdAt: Date;
 }
